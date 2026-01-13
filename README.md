@@ -28,21 +28,87 @@ HealthDataExport allows you to:
 
 ## Project Status
 
-🚧 **In Development** - This project is currently in the planning and initial development phase.
+✅ **Implementation Complete** - All core features have been implemented and are ready for testing.
 
-See [Project Plan](docs/PROJECT_PLAN.md) for detailed implementation roadmap.
+See [Project Plan](docs/PROJECT_PLAN.md) for detailed implementation phases and architecture.
+
+## Supported Health Metrics
+
+- Steps
+- Heart Rate
+- Sleep
+- Active Energy
+- Exercise Time
+- Weight
+- Body Mass Index (BMI)
 
 ## Requirements
 
 - iOS 17.0 or later
 - Xcode 15.0 or later
+- Physical iOS device (HealthKit not available in Simulator)
 - Apple Health data on device
 
 ## Getting Started
 
-1. Clone the repository
-2. Open `HealthDataExport.xcodeproj` in Xcode
-3. Build and run on your iOS device (requires physical device for HealthKit)
+### Setting Up the Xcode Project
+
+The Swift source files are provided in the `HealthDataExport/` directory. To build the app:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AyeJayTwo/HealthDataExport.git
+   cd HealthDataExport
+   ```
+
+2. **Create the Xcode project**:
+   - See detailed instructions in [XCODE_SETUP.md](XCODE_SETUP.md)
+   - Open Xcode and create a new iOS App project
+   - Add the existing source files from the `HealthDataExport/` directory
+   - Configure HealthKit capability
+
+3. **Build and run**:
+   - Connect your iOS device
+   - Select your device as the build target
+   - Press ⌘+R to build and run
+
+### Using the App
+
+1. **Grant Permissions**: On first launch, grant HealthKit access to the metrics you want to export
+
+2. **Select Data**:
+   - Choose which dates to export (default: yesterday)
+   - Select which health metrics to include
+
+3. **Export**:
+   - Tap "Export Data" to create a markdown file
+   - Use the share sheet to send the file to your laptop
+
+4. **Schedule** (Optional):
+   - Go to the Schedule tab
+   - Enable scheduled exports
+   - Choose frequency and time
+   - Grant notification permissions
+
+## Example Export
+
+```markdown
+# Health Data Export
+**Export Date**: January 13, 2026
+**Data for**: January 12, 2026
+
+## Summary
+- **Steps**: 8,432 steps
+- **Heart Rate**: Avg 72 bpm (Min: 58, Max: 145)
+- **Sleep**: 7h 23m
+- **Active Energy**: 456.7 kcal
+- **Exercise Time**: 45 min
+- **Weight**: 165.2 lbs
+- **BMI**: 23.4
+
+## Detailed Data
+...
+```
 
 ## Documentation
 
