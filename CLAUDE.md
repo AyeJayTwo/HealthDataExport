@@ -5,6 +5,8 @@ This file documents user preferences for how Claude Code should interact and gui
 **User**: Ankit Jain
 **Last Updated**: January 13, 2026
 
+**Note**: A copy of this file exists at `~/.claude-preferences.md` for universal access across all projects.
+
 ---
 
 ## 🎯 Interaction Style Preferences
